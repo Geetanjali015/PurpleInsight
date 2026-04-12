@@ -2,7 +2,7 @@
 narrative.py
 ------------
 Converts DuckDB query results into clear, plain-English narratives
-using Groq + Llama 3.1 70B (free tier).
+using Groq
 
 Key features:
     - Use-case-specific narrative templates matching NatWest problem doc
@@ -24,7 +24,7 @@ load_dotenv()
 
 # ── Groq client ───────────────────────────────────────────────────────────────
 _CLIENT = Groq(api_key=os.getenv("GROQ_API_KEY"))
-_MODEL  = "llama-3.1-70b-versatile"
+_MODEL  = "mixtral-8x7b-32768"
 
 # ── Narrative templates per use case ─────────────────────────────────────────
 NARRATIVE_TEMPLATES = {

@@ -29,7 +29,7 @@ load_dotenv()
 
 # ── Groq client ───────────────────────────────────────────────────────────────
 _CLIENT = Groq(api_key=os.getenv("GROQ_API_KEY"))
-_MODEL  = "llama-3.1-70b-versatile"
+_MODEL  = "mixtral-8x7b-32768"
 
 # ── Dataset schemas ───────────────────────────────────────────────────────────
 DATASET_SCHEMAS = {
