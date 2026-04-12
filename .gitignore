@@ -1,0 +1,113 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# PurpleInsight .gitignore
+# NatWest Code for Purpose Hackathon
+# ══════════════════════════════════════════════════════════════════════════════
+
+
+# ── Secrets (NEVER commit these) ──────────────────────────────────────────────
+.env
+*.env
+.env.local
+.env.production
+
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+.env/
+virtualenv/
+
+
+# ── Testing + Coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.cover
+.hypothesis/
+
+
+# ── Logs (never commit logs) ──────────────────────────────────────────────────
+*.log
+debug.log
+error.log
+output.txt
+logs/
+
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+
+# ── Jupyter Notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+
+# ── DuckDB ────────────────────────────────────────────────────────────────────
+*.duckdb
+*.duckdb.wal
+
+
+# ── Data files (raw CSVs are generated, not committed) ────────────────────────
+# Judges run generate_synthetic_data.py to create these themselves
+data/raw/*.csv
+
+
+# ── Temporary / build artefacts ───────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+.cache/
+
+
+# ── Package managers ──────────────────────────────────────────────────────────
+node_modules/
+.npm/

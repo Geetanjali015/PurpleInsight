@@ -1,0 +1,289 @@
+quarter,department,cost_category,cost_gbp,headcount,budget_gbp,variance_pct
+Q1-2023,Technology,Headcount,1315329.95,116,1320708.57,0.14
+Q1-2023,Technology,Infrastructure,794818.15,109,820487.14,3.12
+Q1-2023,Technology,Software Licences,360915.73,118,381655.65,-5.65
+Q1-2023,Technology,Marketing Spend,277080.8,97,294678.65,1.68
+Q1-2023,Technology,Training,199005.34,136,194002.73,-0.97
+Q1-2023,Technology,Outsourcing,226947.73,111,229897.71,-1.78
+Q1-2023,Operations,Headcount,892978.31,196,912699.59,1.5
+Q1-2023,Operations,Infrastructure,349457.69,200,380634.13,-1.67
+Q1-2023,Operations,Software Licences,236483.82,200,232101.31,0.2
+Q1-2023,Operations,Marketing Spend,208017.97,198,224117.72,-1.75
+Q1-2023,Operations,Training,139005.8,192,141301.88,-1.8
+Q1-2023,Operations,Outsourcing,176594.13,190,186301.35,-1.39
+Q1-2023,Risk & Compliance,Headcount,658908.29,76,663910.96,1.4
+Q1-2023,Risk & Compliance,Infrastructure,244042.36,90,238495.03,3.16
+Q1-2023,Risk & Compliance,Software Licences,166851.75,57,173284.44,-4.89
+Q1-2023,Risk & Compliance,Marketing Spend,146457.46,105,153572.43,2.72
+Q1-2023,Risk & Compliance,Training,94399.88,73,98774.01,-0.27
+Q1-2023,Risk & Compliance,Outsourcing,120109.45,66,126380.04,-0.67
+Q1-2023,Marketing,Headcount,374410.77,62,376555.98,3.87
+Q1-2023,Marketing,Infrastructure,165178.04,65,181243.07,-2.49
+Q1-2023,Marketing,Software Licences,109450.35,63,112673.08,0.67
+Q1-2023,Marketing,Marketing Spend,341476.07,55,370169.75,0.37
+Q1-2023,Marketing,Training,69163.8,63,73635.48,-3.06
+Q1-2023,Marketing,Outsourcing,67517.81,55,68889.15,10.89
+Q1-2023,Customer Service,Headcount,557724.27,246,571721.98,1.31
+Q1-2023,Customer Service,Infrastructure,221861.25,244,220582.25,-3.21
+Q1-2023,Customer Service,Software Licences,154076.01,259,149762.22,3.95
+Q1-2023,Customer Service,Marketing Spend,123229.76,254,124119.81,10.09
+Q1-2023,Customer Service,Training,83176.08,255,83531.41,-7.25
+Q1-2023,Customer Service,Outsourcing,90937.76,237,91027.14,6.37
+Q1-2023,Finance,Headcount,305386.42,40,304427.93,-4.16
+Q1-2023,Finance,Infrastructure,121602.07,83,126883.08,1.98
+Q1-2023,Finance,Software Licences,79646.1,80,82756.92,0.09
+Q1-2023,Finance,Marketing Spend,69386.87,57,66161.11,-4.95
+Q1-2023,Finance,Training,46479.72,70,47086.8,0.39
+Q1-2023,Finance,Outsourcing,59682.98,73,58066.43,-13.54
+Q2-2023,Technology,Headcount,1195524.91,110,1159692.2,-4.06
+Q2-2023,Technology,Infrastructure,775429.14,106,820977.78,1.02
+Q2-2023,Technology,Software Licences,319480.59,123,314052.47,11.18
+Q2-2023,Technology,Marketing Spend,267400.25,117,273032.66,-12.62
+Q2-2023,Technology,Training,197490.51,126,200955.78,3.6
+Q2-2023,Technology,Outsourcing,230037.83,128,235878.04,12.73
+Q2-2023,Operations,Headcount,982100.26,185,1018330.65,-2.03
+Q2-2023,Operations,Infrastructure,384279.16,204,421594.36,-5.91
+Q2-2023,Operations,Software Licences,267940.03,208,290068.0,-0.5
+Q2-2023,Operations,Marketing Spend,213495.92,211,210122.65,-9.39
+Q2-2023,Operations,Training,154298.48,199,162306.02,0.08
+Q2-2023,Operations,Outsourcing,180897.43,206,187406.36,-0.18
+Q2-2023,Risk & Compliance,Headcount,663751.71,73,634139.58,3.94
+Q2-2023,Risk & Compliance,Infrastructure,262262.77,88,281114.93,0.09
+Q2-2023,Risk & Compliance,Software Licences,175973.59,86,187312.72,-3.64
+Q2-2023,Risk & Compliance,Marketing Spend,155373.43,82,157589.36,-2.98
+Q2-2023,Risk & Compliance,Training,108184.08,85,116145.16,5.79
+Q2-2023,Risk & Compliance,Outsourcing,126273.98,84,136494.36,-5.64
+Q2-2023,Marketing,Headcount,410302.79,69,433759.84,2.16
+Q2-2023,Marketing,Infrastructure,166146.32,58,173482.2,-0.39
+Q2-2023,Marketing,Software Licences,125353.98,52,127510.46,-1.31
+Q2-2023,Marketing,Marketing Spend,346426.25,77,363977.87,-5.35
+Q2-2023,Marketing,Training,69764.24,58,72054.49,-0.49
+Q2-2023,Marketing,Outsourcing,81624.9,76,87460.1,1.26
+Q2-2023,Customer Service,Headcount,568061.85,260,623541.39,-2.31
+Q2-2023,Customer Service,Infrastructure,235568.68,261,244317.41,5.41
+Q2-2023,Customer Service,Software Licences,144113.22,248,152110.07,1.2
+Q2-2023,Customer Service,Marketing Spend,115681.16,265,111122.19,-0.06
+Q2-2023,Customer Service,Training,88169.73,244,94223.4,-6.63
+Q2-2023,Customer Service,Outsourcing,96354.26,252,97617.26,3.37
+Q2-2023,Finance,Headcount,350192.77,66,349175.12,2.48
+Q2-2023,Finance,Infrastructure,147898.65,77,144996.69,4.05
+Q2-2023,Finance,Software Licences,93142.83,54,95818.33,-5.22
+Q2-2023,Finance,Marketing Spend,78234.27,69,85926.65,2.2
+Q2-2023,Finance,Training,58034.44,77,62780.45,6.29
+Q2-2023,Finance,Outsourcing,61485.3,61,63434.19,-0.29
+Q3-2023,Technology,Headcount,1365144.31,127,1424729.15,2.6
+Q3-2023,Technology,Infrastructure,836722.07,99,799880.14,2.94
+Q3-2023,Technology,Software Licences,315592.87,119,321230.92,-1.56
+Q3-2023,Technology,Marketing Spend,290749.16,122,285376.01,6.73
+Q3-2023,Technology,Training,191077.23,127,196260.82,0.81
+Q3-2023,Technology,Outsourcing,206740.56,110,207342.46,-0.75
+Q3-2023,Operations,Headcount,1029150.81,188,987696.92,-0.7
+Q3-2023,Operations,Infrastructure,442923.18,201,453605.1,-1.64
+Q3-2023,Operations,Software Licences,274815.95,207,263469.27,-2.28
+Q3-2023,Operations,Marketing Spend,229134.38,196,237647.78,3.6
+Q3-2023,Operations,Training,157789.9,204,158648.13,-3.8
+Q3-2023,Operations,Outsourcing,171471.25,209,188298.57,-0.4
+Q3-2023,Risk & Compliance,Headcount,690452.96,88,734860.02,-3.04
+Q3-2023,Risk & Compliance,Infrastructure,278576.39,87,290855.52,5.86
+Q3-2023,Risk & Compliance,Software Licences,182088.6,99,177563.2,1.57
+Q3-2023,Risk & Compliance,Marketing Spend,147695.62,83,158627.48,-1.91
+Q3-2023,Risk & Compliance,Training,111442.09,79,109382.05,0.37
+Q3-2023,Risk & Compliance,Outsourcing,118975.09,89,117730.16,-5.78
+Q3-2023,Marketing,Headcount,410681.71,76,421671.13,-1.76
+Q3-2023,Marketing,Infrastructure,166963.43,70,168909.18,4.07
+Q3-2023,Marketing,Software Licences,105866.47,49,108912.09,-11.04
+Q3-2023,Marketing,Marketing Spend,353755.13,71,381767.83,-5.62
+Q3-2023,Marketing,Training,64927.83,50,71026.03,0.53
+Q3-2023,Marketing,Outsourcing,74230.41,53,78148.82,0.85
+Q3-2023,Customer Service,Headcount,568639.77,252,574206.21,0.28
+Q3-2023,Customer Service,Infrastructure,236828.73,256,230349.25,-3.45
+Q3-2023,Customer Service,Software Licences,145844.17,249,151539.63,0.4
+Q3-2023,Customer Service,Marketing Spend,137468.03,253,144642.32,-10.18
+Q3-2023,Customer Service,Training,83123.68,230,81216.91,-1.65
+Q3-2023,Customer Service,Outsourcing,87945.76,241,95891.49,-7.6
+Q3-2023,Finance,Headcount,351640.79,73,375535.73,-0.52
+Q3-2023,Finance,Infrastructure,130846.95,75,136132.39,9.61
+Q3-2023,Finance,Software Licences,95686.91,65,99974.18,-7.14
+Q3-2023,Finance,Marketing Spend,74592.46,74,74597.01,5.37
+Q3-2023,Finance,Training,55411.65,77,53374.29,3.54
+Q3-2023,Finance,Outsourcing,64095.46,63,69336.81,0.87
+Q4-2023,Technology,Headcount,1284306.46,123,1325434.35,8.39
+Q4-2023,Technology,Infrastructure,746141.88,124,726147.48,7.41
+Q4-2023,Technology,Software Licences,355166.79,128,367619.24,2.94
+Q4-2023,Technology,Marketing Spend,303664.13,109,324424.66,-6.93
+Q4-2023,Technology,Training,199543.84,98,205220.71,6.15
+Q4-2023,Technology,Outsourcing,242045.97,115,243993.23,-1.85
+Q4-2023,Operations,Headcount,987944.66,201,1035711.28,2.79
+Q4-2023,Operations,Infrastructure,390750.6,209,415900.36,2.23
+Q4-2023,Operations,Software Licences,254793.9,213,261574.36,-6.79
+Q4-2023,Operations,Marketing Spend,217964.61,209,211441.42,-3.62
+Q4-2023,Operations,Training,155654.05,205,166746.46,-4.3
+Q4-2023,Operations,Outsourcing,174544.13,198,182805.02,-2.76
+Q4-2023,Risk & Compliance,Headcount,725309.1,90,742185.7,-1.96
+Q4-2023,Risk & Compliance,Infrastructure,285244.29,81,310149.33,3.25
+Q4-2023,Risk & Compliance,Software Licences,210343.54,95,212069.11,14.73
+Q4-2023,Risk & Compliance,Marketing Spend,169672.6,73,180542.47,2.26
+Q4-2023,Risk & Compliance,Training,115740.18,89,126719.13,-6.49
+Q4-2023,Risk & Compliance,Outsourcing,149933.72,88,143261.25,-8.42
+Q4-2023,Marketing,Headcount,517349.52,71,500671.86,-6.36
+Q4-2023,Marketing,Infrastructure,205915.3,40,209663.42,-0.45
+Q4-2023,Marketing,Software Licences,139921.4,54,135694.83,-7.53
+Q4-2023,Marketing,Marketing Spend,445067.64,53,454929.07,3.15
+Q4-2023,Marketing,Training,73898.82,52,71830.41,-10.11
+Q4-2023,Marketing,Outsourcing,89118.38,58,92079.39,-5.94
+Q4-2023,Customer Service,Headcount,596728.09,247,601587.45,1.34
+Q4-2023,Customer Service,Infrastructure,230134.85,237,239571.37,10.28
+Q4-2023,Customer Service,Software Licences,147791.61,256,145522.29,3.85
+Q4-2023,Customer Service,Marketing Spend,125248.72,256,124150.93,1.23
+Q4-2023,Customer Service,Training,82032.15,246,86623.16,-3.06
+Q4-2023,Customer Service,Outsourcing,98573.68,236,103444.51,5.63
+Q4-2023,Finance,Headcount,387712.92,82,417733.77,-1.72
+Q4-2023,Finance,Infrastructure,143151.34,62,150194.81,3.22
+Q4-2023,Finance,Software Licences,99689.1,69,103788.39,6.48
+Q4-2023,Finance,Marketing Spend,83804.81,61,85323.2,-3.4
+Q4-2023,Finance,Training,59459.88,80,56899.12,2.76
+Q4-2023,Finance,Outsourcing,71945.89,86,76052.36,2.21
+Q1-2024,Technology,Headcount,1216719.58,116,1163957.52,3.77
+Q1-2024,Technology,Infrastructure,884124.55,124,905011.52,5.84
+Q1-2024,Technology,Software Licences,342941.4,126,349469.72,4.12
+Q1-2024,Technology,Marketing Spend,260695.15,115,271677.59,4.75
+Q1-2024,Technology,Training,205312.74,108,221601.81,-12.15
+Q1-2024,Technology,Outsourcing,227233.32,119,242558.18,-4.42
+Q1-2024,Operations,Headcount,1031471.09,206,1113735.74,-11.78
+Q1-2024,Operations,Infrastructure,375956.53,196,413357.27,2.86
+Q1-2024,Operations,Software Licences,274828.88,204,268961.65,-1.92
+Q1-2024,Operations,Marketing Spend,219893.31,192,220585.31,3.84
+Q1-2024,Operations,Training,149286.55,208,151811.53,1.04
+Q1-2024,Operations,Outsourcing,178441.62,193,190942.33,-6.78
+Q1-2024,Risk & Compliance,Headcount,690021.52,56,701295.7,-0.99
+Q1-2024,Risk & Compliance,Infrastructure,293609.8,85,311508.33,-2.48
+Q1-2024,Risk & Compliance,Software Licences,187531.91,74,199701.1,0.74
+Q1-2024,Risk & Compliance,Marketing Spend,167916.66,89,180674.91,2.6
+Q1-2024,Risk & Compliance,Training,106447.88,87,111635.09,-8.43
+Q1-2024,Risk & Compliance,Outsourcing,123154.77,85,133250.74,3.7
+Q1-2024,Marketing,Headcount,444383.16,58,428839.75,2.69
+Q1-2024,Marketing,Infrastructure,166825.3,51,166723.61,0.31
+Q1-2024,Marketing,Software Licences,117791.96,41,123071.26,2.28
+Q1-2024,Marketing,Marketing Spend,404308.79,59,425414.45,11.87
+Q1-2024,Marketing,Training,65795.9,56,70082.16,-1.98
+Q1-2024,Marketing,Outsourcing,77557.19,56,78797.85,-7.03
+Q1-2024,Customer Service,Headcount,560266.58,262,608315.18,11.01
+Q1-2024,Customer Service,Infrastructure,240243.7,242,241113.73,-3.48
+Q1-2024,Customer Service,Software Licences,148941.19,267,155875.31,-0.83
+Q1-2024,Customer Service,Marketing Spend,116809.86,244,120164.6,3.79
+Q1-2024,Customer Service,Training,90601.31,247,94468.18,3.42
+Q1-2024,Customer Service,Outsourcing,88715.24,251,93268.57,4.3
+Q1-2024,Finance,Headcount,334225.08,51,354570.23,7.95
+Q1-2024,Finance,Infrastructure,134500.56,72,138197.54,3.02
+Q1-2024,Finance,Software Licences,100048.7,68,105715.08,-2.7
+Q1-2024,Finance,Marketing Spend,78184.38,82,77560.74,-0.85
+Q1-2024,Finance,Training,51669.0,54,49432.09,-6.11
+Q1-2024,Finance,Outsourcing,64690.98,66,65023.92,-3.04
+Q2-2024,Technology,Headcount,1331042.69,117,1366135.8,-1.37
+Q2-2024,Technology,Infrastructure,880336.69,135,863949.65,-8.05
+Q2-2024,Technology,Software Licences,359231.03,112,393637.74,-1.24
+Q2-2024,Technology,Marketing Spend,299089.48,117,298103.83,1.15
+Q2-2024,Technology,Training,213111.83,122,212320.19,-3.23
+Q2-2024,Technology,Outsourcing,228215.01,105,233352.04,-4.27
+Q2-2024,Operations,Headcount,1033074.7,188,989386.94,1.6
+Q2-2024,Operations,Infrastructure,427894.27,198,465532.68,7.05
+Q2-2024,Operations,Software Licences,294721.46,194,284512.43,-2.12
+Q2-2024,Operations,Marketing Spend,233031.24,208,226706.23,-1.54
+Q2-2024,Operations,Training,152324.55,199,149890.9,-7.69
+Q2-2024,Operations,Outsourcing,212115.06,190,222132.51,-0.81
+Q2-2024,Risk & Compliance,Headcount,720691.75,77,719542.69,2.11
+Q2-2024,Risk & Compliance,Infrastructure,314819.08,87,301402.41,7.39
+Q2-2024,Risk & Compliance,Software Licences,184794.39,83,186658.86,0.78
+Q2-2024,Risk & Compliance,Marketing Spend,165351.66,93,181650.71,-1.1
+Q2-2024,Risk & Compliance,Training,111443.05,85,107773.75,-8.89
+Q2-2024,Risk & Compliance,Outsourcing,128459.72,78,134133.5,-4.6
+Q2-2024,Marketing,Headcount,425324.58,58,429165.94,1.47
+Q2-2024,Marketing,Infrastructure,191831.51,59,209126.86,4.68
+Q2-2024,Marketing,Software Licences,123977.66,61,127705.95,-5.45
+Q2-2024,Marketing,Marketing Spend,370633.02,61,356251.41,-2.71
+Q2-2024,Marketing,Training,73084.24,67,69840.85,-0.92
+Q2-2024,Marketing,Outsourcing,75232.06,65,78679.98,-5.09
+Q2-2024,Customer Service,Headcount,539510.65,248,583616.3,5.85
+Q2-2024,Customer Service,Infrastructure,226859.35,245,230840.76,-7.63
+Q2-2024,Customer Service,Software Licences,155453.9,242,158090.6,0.59
+Q2-2024,Customer Service,Marketing Spend,123832.02,258,118633.0,-0.79
+Q2-2024,Customer Service,Training,87985.32,254,95232.85,10.53
+Q2-2024,Customer Service,Outsourcing,105331.87,249,103732.73,0.02
+Q2-2024,Finance,Headcount,340137.57,64,372800.44,-3.86
+Q2-2024,Finance,Infrastructure,147506.25,59,157926.75,6.67
+Q2-2024,Finance,Software Licences,98807.34,70,103168.15,0.0
+Q2-2024,Finance,Marketing Spend,77144.33,72,77420.05,5.44
+Q2-2024,Finance,Training,53595.87,54,55035.28,3.52
+Q2-2024,Finance,Outsourcing,64514.01,58,63837.3,-3.67
+Q3-2024,Technology,Headcount,1289531.86,116,1413905.93,-1.33
+Q3-2024,Technology,Infrastructure,805444.88,112,834582.45,-1.14
+Q3-2024,Technology,Software Licences,359792.47,116,357639.71,5.79
+Q3-2024,Technology,Marketing Spend,304887.63,104,331488.14,2.62
+Q3-2024,Technology,Training,214435.54,115,235547.01,-7.48
+Q3-2024,Technology,Outsourcing,237963.17,119,255313.16,-5.61
+Q3-2024,Operations,Headcount,980892.24,197,994123.27,-2.09
+Q3-2024,Operations,Infrastructure,392438.53,188,423218.94,-2.17
+Q3-2024,Operations,Software Licences,269727.17,196,294829.82,-8.36
+Q3-2024,Operations,Marketing Spend,213760.05,189,229185.09,1.34
+Q3-2024,Operations,Training,155697.29,183,149463.02,3.8
+Q3-2024,Operations,Outsourcing,165407.75,215,162544.44,-0.24
+Q3-2024,Risk & Compliance,Headcount,667799.03,83,647903.22,-1.96
+Q3-2024,Risk & Compliance,Infrastructure,281926.51,96,281332.97,-3.5
+Q3-2024,Risk & Compliance,Software Licences,189429.97,94,186170.73,1.35
+Q3-2024,Risk & Compliance,Marketing Spend,144743.57,85,148331.96,-5.82
+Q3-2024,Risk & Compliance,Training,117919.94,71,123731.72,14.85
+Q3-2024,Risk & Compliance,Outsourcing,135146.96,72,145997.99,0.1
+Q3-2024,Marketing,Headcount,469119.32,64,470648.69,6.26
+Q3-2024,Marketing,Infrastructure,179462.12,56,195925.17,-1.73
+Q3-2024,Marketing,Software Licences,125548.19,63,126164.35,1.46
+Q3-2024,Marketing,Marketing Spend,417227.16,39,440576.35,1.55
+Q3-2024,Marketing,Training,70990.01,76,69146.05,-7.64
+Q3-2024,Marketing,Outsourcing,86502.93,60,93985.59,2.44
+Q3-2024,Customer Service,Headcount,635526.32,254,667559.38,1.21
+Q3-2024,Customer Service,Infrastructure,241299.69,249,253215.54,-3.58
+Q3-2024,Customer Service,Software Licences,164484.22,226,162021.6,2.15
+Q3-2024,Customer Service,Marketing Spend,136540.11,246,140138.84,1.1
+Q3-2024,Customer Service,Training,89270.59,269,97685.22,-0.51
+Q3-2024,Customer Service,Outsourcing,109099.62,240,116311.48,0.12
+Q3-2024,Finance,Headcount,403029.05,78,395474.91,2.73
+Q3-2024,Finance,Infrastructure,150524.99,55,143850.99,-1.01
+Q3-2024,Finance,Software Licences,100976.73,80,104484.68,1.55
+Q3-2024,Finance,Marketing Spend,92016.06,81,88639.92,-2.28
+Q3-2024,Finance,Training,54256.03,83,56094.31,6.8
+Q3-2024,Finance,Outsourcing,63467.82,85,69069.81,1.91
+Q4-2024,Technology,Headcount,1511966.7,133,1586481.44,3.26
+Q4-2024,Technology,Infrastructure,891092.83,126,932421.67,-2.0
+Q4-2024,Technology,Software Licences,372041.95,110,409019.0,-1.67
+Q4-2024,Technology,Marketing Spend,305192.32,113,300313.91,0.68
+Q4-2024,Technology,Training,214098.74,125,209015.51,-8.11
+Q4-2024,Technology,Outsourcing,247303.54,121,238294.4,-1.55
+Q4-2024,Operations,Headcount,956484.88,203,1031263.31,3.24
+Q4-2024,Operations,Infrastructure,425783.77,210,451525.89,1.01
+Q4-2024,Operations,Software Licences,283650.08,201,272402.19,3.44
+Q4-2024,Operations,Marketing Spend,212644.72,191,213079.35,7.93
+Q4-2024,Operations,Training,141715.23,198,150335.76,5.86
+Q4-2024,Operations,Outsourcing,183818.74,195,189449.41,0.65
+Q4-2024,Risk & Compliance,Headcount,739111.8,73,766800.18,5.54
+Q4-2024,Risk & Compliance,Infrastructure,316196.03,78,338192.06,-6.93
+Q4-2024,Risk & Compliance,Software Licences,191638.5,78,182745.5,2.53
+Q4-2024,Risk & Compliance,Marketing Spend,155728.7,72,158840.87,2.55
+Q4-2024,Risk & Compliance,Training,120185.02,73,117912.99,-6.67
+Q4-2024,Risk & Compliance,Outsourcing,152738.33,87,151783.03,-1.34
+Q4-2024,Marketing,Headcount,547601.9,68,551788.37,0.8
+Q4-2024,Marketing,Infrastructure,221418.22,58,225988.6,-7.24
+Q4-2024,Marketing,Software Licences,161180.9,50,159277.55,-6.8
+Q4-2024,Marketing,Marketing Spend,484592.23,50,473205.72,-0.26
+Q4-2024,Marketing,Training,88663.53,69,85857.31,4.07
+Q4-2024,Marketing,Outsourcing,96464.04,60,102391.91,2.04
+Q4-2024,Customer Service,Headcount,581359.54,235,602198.54,10.2
+Q4-2024,Customer Service,Infrastructure,221520.63,248,228546.25,-3.85
+Q4-2024,Customer Service,Software Licences,145981.29,272,152922.01,4.7
+Q4-2024,Customer Service,Marketing Spend,115877.95,265,126102.64,5.97
+Q4-2024,Customer Service,Training,86688.98,253,88687.89,-0.07
+Q4-2024,Customer Service,Outsourcing,110396.85,242,117143.04,0.73
+Q4-2024,Finance,Headcount,341768.85,91,372016.18,-5.91
+Q4-2024,Finance,Infrastructure,148879.74,52,155052.88,-2.0
+Q4-2024,Finance,Software Licences,100243.92,61,101617.68,2.93
+Q4-2024,Finance,Marketing Spend,80710.0,81,82025.01,6.81
+Q4-2024,Finance,Training,55587.3,70,55615.12,0.92
+Q4-2024,Finance,Outsourcing,67475.19,70,73699.49,0.95
