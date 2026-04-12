@@ -1,0 +1,465 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# PurpleInsight — Semantic Metric Dictionary
+# ══════════════════════════════════════════════════════════════════════════════
+# This file is the single source of truth for all metric definitions.
+# Every LLM query is resolved through this dictionary first.
+# This ensures "revenue" always means the same thing across all queries,
+# teams, and time periods — a core requirement from the NatWest problem doc.
+# ══════════════════════════════════════════════════════════════════════════════
+
+metadata:
+  version: "1.0"
+  owner: "PurpleInsight"
+  last_updated: "2025-01-01"
+  description: >
+    Canonical metric definitions for NatWest banking analytics.
+    All natural language queries are resolved against these definitions
+    before SQL generation to ensure consistency and trust.
+
+# ── Datasets available ────────────────────────────────────────────────────────
+datasets:
+  regional_revenue:
+    file: "data/raw/regional_revenue.csv"
+    description: "Monthly revenue broken down by region, product, and channel"
+    grain: "One row per month × region × product × channel"
+    date_column: "month"
+    date_format: "YYYY-MM"
+    primary_use_cases: ["change_analysis", "compare"]
+
+  customer_metrics:
+    file: "data/raw/customer_metrics.csv"
+    description: "Monthly customer signups, churn, complaints, and NPS by segment and region"
+    grain: "One row per month × segment × region"
+    date_column: "month"
+    date_format: "YYYY-MM"
+    primary_use_cases: ["change_analysis", "summarize"]
+
+  product_performance:
+    file: "data/raw/product_performance.csv"
+    description: "Weekly product performance metrics including volume, revenue, and return rate"
+    grain: "One row per week × product × region"
+    date_column: "week"
+    date_format: "YYYY-WNN"
+    primary_use_cases: ["compare", "breakdown"]
+
+  cost_breakdown:
+    file: "data/raw/cost_breakdown.csv"
+    description: "Quarterly cost breakdown by department and cost category"
+    grain: "One row per quarter × department × cost category"
+    date_column: "quarter"
+    date_format: "QN-YYYY"
+    primary_use_cases: ["breakdown"]
+
+  weekly_kpis:
+    file: "data/raw/weekly_kpis.csv"
+    description: "Weekly KPI summary across all business metrics"
+    grain: "One row per week"
+    date_column: "week"
+    date_format: "YYYY-WNN"
+    primary_use_cases: ["summarize"]
+
+
+# ── Core metric definitions ───────────────────────────────────────────────────
+metrics:
+
+  # ── Revenue metrics ──────────────────────────────────────────────────────────
+  revenue:
+    display_name: "Total Revenue"
+    definition: >
+      Sum of all revenue generated from banking products across all channels.
+      Measured in GBP. Includes interest income, fee income, and product margins.
+      Does NOT include inter-company transfers or provisions.
+    column: "revenue"
+    datasets: ["regional_revenue", "product_performance", "weekly_kpis"]
+    aggregation: "SUM"
+    unit: "GBP"
+    format: "currency"
+    aliases: ["income", "earnings", "sales", "turnover", "total revenue", "net revenue"]
+
+  net_revenue:
+    display_name: "Net Revenue (Weekly)"
+    definition: >
+      Total weekly net revenue across all NatWest products and regions.
+      Measured in GBP after deducting direct costs.
+    column: "net_revenue_gbp"
+    datasets: ["weekly_kpis"]
+    aggregation: "SUM"
+    unit: "GBP"
+    format: "currency"
+    aliases: ["weekly revenue", "weekly income", "weekly earnings"]
+
+  ad_spend:
+    display_name: "Advertising Spend"
+    definition: >
+      Total marketing and advertising expenditure per region/product/channel per month.
+      Measured in GBP. Used to analyse revenue-to-spend ratios.
+    column: "ad_spend"
+    datasets: ["regional_revenue"]
+    aggregation: "SUM"
+    unit: "GBP"
+    format: "currency"
+    aliases: ["marketing spend", "advertising cost", "ad budget", "marketing budget"]
+
+  # ── Customer metrics ─────────────────────────────────────────────────────────
+  active_customers:
+    display_name: "Active Customers"
+    definition: >
+      Number of customers who have conducted at least one transaction or
+      interaction in the reporting period. Excludes dormant accounts
+      (no activity for 12+ months).
+    column: "active_customers"
+    datasets: ["customer_metrics"]
+    aggregation: "SUM"
+    unit: "count"
+    format: "number"
+    aliases: ["customers", "active users", "users", "account holders", "clients"]
+
+  new_signups:
+    display_name: "New Customer Signups"
+    definition: >
+      Number of new customers who opened a NatWest account in the reporting period.
+      Includes all product types. Excludes existing customers opening additional accounts.
+    column: "new_signups"
+    datasets: ["customer_metrics", "weekly_kpis"]
+    aggregation: "SUM"
+    unit: "count"
+    format: "number"
+    aliases: ["signups", "new accounts", "new customers", "acquisitions", "registrations"]
+
+  churn:
+    display_name: "Customer Churn Count"
+    definition: >
+      Number of customers who closed all their NatWest accounts in the reporting period.
+      A customer is considered churned when they have zero active products remaining.
+    column: "churned"
+    datasets: ["customer_metrics"]
+    aggregation: "SUM"
+    unit: "count"
+    format: "number"
+    aliases: ["churned customers", "lost customers", "attrition", "customer loss"]
+
+  churn_rate:
+    display_name: "Churn Rate (%)"
+    definition: >
+      Percentage of customers who left NatWest in the reporting period.
+      Calculated as: (churned customers / total active customers at period start) × 100.
+      Industry benchmark: UK retail banking average is 1.5%–3.0% annually.
+    column: "churn_rate_pct"
+    datasets: ["customer_metrics", "weekly_kpis"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["attrition rate", "customer attrition", "dropout rate", "churn percentage"]
+
+  complaints:
+    display_name: "Customer Complaints"
+    definition: >
+      Total number of formal complaints received from customers in the reporting period.
+      Includes complaints via all channels (branch, phone, online, app).
+      Excludes general enquiries and informal feedback.
+    column: "complaints"
+    datasets: ["customer_metrics", "weekly_kpis"]
+    aggregation: "SUM"
+    unit: "count"
+    format: "number"
+    aliases: ["complaint count", "customer issues", "grievances", "escalations"]
+
+  nps:
+    display_name: "Net Promoter Score (NPS)"
+    definition: >
+      Measure of customer loyalty and satisfaction. Scale 0–100.
+      Calculated from customer survey responses: % promoters minus % detractors.
+      NatWest target: above 40. UK banking average: ~30–35.
+      Higher is better.
+    column: "nps_score"
+    datasets: ["customer_metrics", "weekly_kpis"]
+    aggregation: "AVG"
+    unit: "score"
+    format: "number"
+    aliases: ["net promoter score", "customer satisfaction", "satisfaction score", "nps score"]
+
+  # ── Product metrics ──────────────────────────────────────────────────────────
+  transaction_volume:
+    display_name: "Transaction Volume"
+    definition: >
+      Total number of transactions processed for a given product in the reporting period.
+      Includes all transaction types: deposits, withdrawals, transfers, payments.
+    column: "transaction_volume"
+    datasets: ["product_performance"]
+    aggregation: "SUM"
+    unit: "count"
+    format: "number"
+    aliases: ["transactions", "volume", "transaction count", "number of transactions"]
+
+  return_rate:
+    display_name: "Return Customer Rate (%)"
+    definition: >
+      Percentage of customers who returned to use a product after their initial interaction.
+      Calculated as: (return_customers / total_customers) × 100.
+      A high return rate indicates strong product stickiness and customer loyalty.
+    column: "return_rate_pct"
+    datasets: ["product_performance"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["return rate", "repeat rate", "loyalty rate", "retention rate", "customer return rate"]
+
+  conversion_rate:
+    display_name: "Conversion Rate (%)"
+    definition: >
+      Percentage of prospects or enquiries that resulted in a completed product sign-up.
+      Calculated as: (completed sign-ups / total enquiries) × 100.
+    column: "conversion_rate_pct"
+    datasets: ["product_performance"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["conversion", "sign-up rate", "close rate", "success rate"]
+
+  satisfaction:
+    display_name: "Customer Satisfaction Score"
+    definition: >
+      Average product satisfaction score rated by customers. Scale 1.0–5.0.
+      Collected via post-interaction surveys. Score above 4.0 is considered good.
+      Score below 3.5 triggers a service review.
+    column: "satisfaction_score"
+    datasets: ["product_performance"]
+    aggregation: "AVG"
+    unit: "score"
+    format: "decimal"
+    aliases: ["satisfaction", "product satisfaction", "customer rating", "star rating", "csat"]
+
+  # ── Cost metrics ─────────────────────────────────────────────────────────────
+  cost:
+    display_name: "Total Cost (GBP)"
+    definition: >
+      Total expenditure incurred by a department in the reporting period.
+      Includes all cost categories: headcount, infrastructure, software,
+      marketing spend, training, and outsourcing.
+      Measured in GBP. Excludes capital expenditure (CapEx).
+    column: "cost_gbp"
+    datasets: ["cost_breakdown"]
+    aggregation: "SUM"
+    unit: "GBP"
+    format: "currency"
+    aliases: ["costs", "expenditure", "spend", "expenses", "department cost", "total spend"]
+
+  budget:
+    display_name: "Budget (GBP)"
+    definition: >
+      Approved budget allocation for a department and cost category per quarter.
+      Set at the beginning of each financial year. Measured in GBP.
+    column: "budget_gbp"
+    datasets: ["cost_breakdown"]
+    aggregation: "SUM"
+    unit: "GBP"
+    format: "currency"
+    aliases: ["approved budget", "budget allocation", "planned spend"]
+
+  variance:
+    display_name: "Budget Variance (%)"
+    definition: >
+      Percentage difference between actual cost and approved budget.
+      Positive variance = overspend. Negative variance = underspend.
+      Calculated as: ((actual - budget) / budget) × 100.
+    column: "variance_pct"
+    datasets: ["cost_breakdown"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["budget variance", "overspend", "underspend", "variance from budget"]
+
+  headcount:
+    display_name: "Headcount"
+    definition: >
+      Number of full-time equivalent (FTE) employees in a department.
+      Includes permanent staff and long-term contractors. Excludes temps.
+    column: "headcount"
+    datasets: ["cost_breakdown"]
+    aggregation: "AVG"
+    unit: "count"
+    format: "number"
+    aliases: ["employees", "staff", "fte", "workforce", "team size", "people"]
+
+  # ── Operational metrics ──────────────────────────────────────────────────────
+  avg_handle_time:
+    display_name: "Average Handle Time (seconds)"
+    definition: >
+      Average time in seconds for a customer service agent to resolve a customer query.
+      Measured from call/chat start to resolution including after-call work.
+      UK banking call centre benchmark: approximately 340 seconds.
+      Lower is better (indicates efficiency improvement).
+    column: "avg_handle_time_secs"
+    datasets: ["weekly_kpis"]
+    aggregation: "AVG"
+    unit: "seconds"
+    format: "number"
+    aliases: ["handle time", "call duration", "average call time", "aht", "resolution time"]
+
+  digital_adoption:
+    display_name: "Digital Adoption Rate (%)"
+    definition: >
+      Percentage of customer interactions conducted via digital channels
+      (mobile app or online banking) as opposed to branch or telephone.
+      NatWest target: 75%+ by end of 2025.
+    column: "digital_adoption_pct"
+    datasets: ["weekly_kpis"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["digital usage", "app usage", "online banking rate", "digital channel rate"]
+
+  complaint_resolution_rate:
+    display_name: "Complaint Resolution Rate (%)"
+    definition: >
+      Percentage of complaints successfully resolved within the FCA-mandated
+      8-week window. UK regulatory requirement: above 80%.
+      NatWest target: above 90%.
+    column: "complaint_resolution_rate"
+    datasets: ["weekly_kpis"]
+    aggregation: "AVG"
+    unit: "percentage"
+    format: "percent"
+    aliases: ["resolution rate", "complaint resolution", "complaint close rate"]
+
+
+# ── Dimension definitions ─────────────────────────────────────────────────────
+dimensions:
+
+  region:
+    display_name: "UK Region"
+    definition: "Geographic region within the United Kingdom"
+    valid_values: ["North", "South", "East", "West", "Scotland", "Wales"]
+    aliases: ["area", "geography", "location", "zone"]
+
+  product:
+    display_name: "Banking Product"
+    definition: "NatWest banking product type"
+    valid_values:
+      - "Personal Current Account"
+      - "Savings Account"
+      - "Mortgage"
+      - "Credit Card"
+      - "Business Loan"
+    aliases: ["product type", "account type", "banking product", "financial product"]
+
+  channel:
+    display_name: "Distribution Channel"
+    definition: "Channel through which the customer interacted with NatWest"
+    valid_values: ["Branch", "Mobile App", "Online", "Telephone"]
+    aliases: ["distribution channel", "touchpoint", "interaction channel"]
+
+  segment:
+    display_name: "Customer Segment"
+    definition: "NatWest customer classification by relationship type"
+    valid_values: ["Retail", "Business", "Premier", "Student"]
+    aliases: ["customer type", "customer segment", "customer category", "tier"]
+
+  department:
+    display_name: "Business Department"
+    definition: "Internal NatWest department responsible for the cost"
+    valid_values:
+      - "Technology"
+      - "Operations"
+      - "Risk & Compliance"
+      - "Marketing"
+      - "Customer Service"
+      - "Finance"
+    aliases: ["team", "division", "business unit", "function", "dept"]
+
+  cost_category:
+    display_name: "Cost Category"
+    definition: "Type of expenditure within a department"
+    valid_values:
+      - "Headcount"
+      - "Infrastructure"
+      - "Software Licences"
+      - "Marketing Spend"
+      - "Training"
+      - "Outsourcing"
+    aliases: ["cost type", "expense type", "spend category"]
+
+
+# ── Time period resolution ────────────────────────────────────────────────────
+# Used by ambiguity_handler.py to resolve vague time references
+time_periods:
+  "last month": "previous calendar month"
+  "this month": "current calendar month"
+  "last week": "previous ISO week (Monday–Sunday)"
+  "this week": "current ISO week"
+  "last quarter": "previous financial quarter (Q1=Jan-Mar, Q2=Apr-Jun, Q3=Jul-Sep, Q4=Oct-Dec)"
+  "this quarter": "current financial quarter"
+  "last year": "previous calendar year (Jan–Dec)"
+  "this year": "current calendar year"
+  "last cycle": "previous reporting period (context-dependent: week/month/quarter)"
+  "recently": "last 4 weeks"
+  "ytd": "year to date — from 1 January of the current year to today"
+  "qtd": "quarter to date — from start of current quarter to today"
+
+
+# ── Use case routing hints ────────────────────────────────────────────────────
+# Used by intent_router.py for keyword-based pre-filtering
+use_case_keywords:
+  change_analysis:
+    - "why did"
+    - "what caused"
+    - "dropped"
+    - "increased"
+    - "decreased"
+    - "fell"
+    - "rose"
+    - "changed"
+    - "spike"
+    - "dip"
+    - "decline"
+    - "growth"
+    - "driver"
+    - "reason"
+
+  compare:
+    - "vs"
+    - "versus"
+    - "compare"
+    - "compared to"
+    - "difference between"
+    - "better"
+    - "worse"
+    - "outperform"
+    - "underperform"
+    - "this week vs"
+    - "last week vs"
+    - "region a vs"
+    - "which is"
+    - "how does"
+
+  breakdown:
+    - "breakdown"
+    - "break down"
+    - "what makes up"
+    - "decompose"
+    - "composition"
+    - "split"
+    - "by department"
+    - "by region"
+    - "by product"
+    - "by channel"
+    - "contributors"
+    - "components"
+    - "share"
+    - "proportion"
+
+  summarize:
+    - "summary"
+    - "summarize"
+    - "summarise"
+    - "overview"
+    - "digest"
+    - "update"
+    - "weekly summary"
+    - "monthly summary"
+    - "daily summary"
+    - "give me a"
+    - "what happened"
+    - "how are we doing"
+    - "state of"
+    - "report"

@@ -32,13 +32,13 @@ FAIL = 0
 def passed(msg):
     global PASS
     PASS += 1
-    print(f"  ✅ PASS  {msg}")
+    print(f" PASS  {msg}")
 
 
 def warned(msg):
     global WARN
     WARN += 1
-    print(f"  ⚠️  WARN  {msg}")
+    print(f"  WARN  {msg}")
 
 
 def failed(msg):
