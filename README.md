@@ -315,6 +315,9 @@ PurpleInsight/
 
 ---
 ## Screenshots
+<img width="1442" height="799" alt="image" src="https://github.com/user-attachments/assets/9742b4c7-db7b-461d-b930-511c621048d5" />
+
+
 <img width="1254" height="985" alt="image" src="https://github.com/user-attachments/assets/af31d322-095e-4811-a811-d7d21206c277" />
 <img width="1710" height="993" alt="image" src="https://github.com/user-attachments/assets/05539463-c0a4-4ba0-9569-29c0c1c990a9" />
 
