@@ -314,6 +314,11 @@ PurpleInsight/
 ```
 
 ---
+##Screenshots
+<img width="1254" height="985" alt="image" src="https://github.com/user-attachments/assets/af31d322-095e-4811-a811-d7d21206c277" />
+<img width="1710" height="993" alt="image" src="https://github.com/user-attachments/assets/05539463-c0a4-4ba0-9569-29c0c1c990a9" />
+
+
 
 ## License
 
