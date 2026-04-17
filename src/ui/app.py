@@ -867,7 +867,7 @@ def render_navbar():
                 <div class="pi-navbar-subtitle">NatWest · Self-Service Banking Intelligence</div>
             </div>
         </div>
-        <div class="pi-navbar-badge">Code for Purpose Hackathon 2025</div>
+        <div class="pi-navbar-badge">Code for Purpose Hackathon 2026</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -1181,16 +1181,15 @@ def page_analyse(pipeline):
 
     st.markdown(f"""
     <div class="pi-hero">
-        <div class="pi-eyebrow">Self-service banking intelligence</div>
-        <div class="pi-hero-title">Ask a business question. Get a clear answer, the chart, and the trust trail in one place.</div>
-        <div class="pi-hero-subtitle">
-            PurpleInsight turns natural-language questions into trusted analytics across registered business datasets, with clear answers, transparent sources, and a governed trust trail.
-        </div>
-        <div class="pi-hero-meta">
-            <div class="pi-hero-pill">Pipeline: {pipeline_status}</div>
-            <div class="pi-hero-pill">Provider: {llm_status['provider']}</div>
-            <div class="pi-hero-pill">{pipeline_detail}</div>
-        </div>
+       <div class="pi-eyebrow">AI-powered business intelligence</div>
+
+<div class="pi-hero-title">
+From questions to insights — in seconds.
+</div>
+
+<div class="pi-hero-subtitle">
+Turn natural language into accurate analytics, complete with charts, explanations, and transparent data sources — all in one seamless experience.
+</div>
     </div>
     """, unsafe_allow_html=True)
 

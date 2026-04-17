@@ -2,7 +2,7 @@
 narrative.py
 ------------
 Converts DuckDB query results into clear, plain-English narratives
-using Groq + Llama 3.1 70B (free tier).
+using Groq
 
 Key features:
     - Use-case-specific narrative templates matching NatWest problem doc
