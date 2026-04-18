@@ -315,11 +315,23 @@ PurpleInsight/
 
 ---
 ## Screenshots
-<img width="1442" height="799" alt="image" src="https://github.com/user-attachments/assets/9742b4c7-db7b-461d-b930-511c621048d5" />
+
+### 1. HomePage 
+<img width="1390" height="777" alt="image" src="https://github.com/user-attachments/assets/c3df0370-f996-4e17-9606-beff75a260b1" />
+
+### 2. Dataset Registry — Upload and manage data sources
+<img width="1185" height="764" alt="image" src="https://github.com/user-attachments/assets/299ba4a9-e019-4240-a121-6f78ee6cb842" />
+
+### 3. Analyse — Query results with narrative, chart, and key facts
+<img width="1233" height="773" alt="image" src="https://github.com/user-attachments/assets/81aa852d-9287-42a3-8f5e-81c7c93d9834" />
+
+<img width="1230" height="423" alt="image" src="https://github.com/user-attachments/assets/e2318bed-7170-4b44-bd28-26c0d6bc9264" />
 
 
-<img width="1254" height="985" alt="image" src="https://github.com/user-attachments/assets/af31d322-095e-4811-a811-d7d21206c277" />
-<img width="1710" height="993" alt="image" src="https://github.com/user-attachments/assets/05539463-c0a4-4ba0-9569-29c0c1c990a9" />
+
+### 4. Trust Trail — Full audit view of how an answer was produced
+<img width="1600" height="643" alt="image" src="https://github.com/user-attachments/assets/05ba4845-e922-4edd-9c04-a4b037dc828f" />
+
 
 
 
