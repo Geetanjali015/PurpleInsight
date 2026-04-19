@@ -1216,9 +1216,6 @@ def _get_demo_queries(dataset_id: str, display_name: str, use_cases: list) -> li
     for uc in use_cases:
         if uc in uc_templates:
             demos.append(uc_templates[uc])
-    # pad to 4
-    while len(demos) < 4 and demos:
-        demos.append(demos[len(demos) % len(demos)])
     return demos[:4]
 
 
@@ -1361,9 +1358,9 @@ def page_analyse(pipeline):
         st.markdown("<div class='pi-section-label' style='margin-top:8px;'>Example queries</div>",
                     unsafe_allow_html=True)
         demo_cols = st.columns(len(demos))
-        for col, (label, q) in zip(demo_cols, demos):
+        for i, (col, (label, q)) in enumerate(zip(demo_cols, demos)):
             with col:
-                if st.button(label, key=f"demo_{selected_id}_{label}", use_container_width=True):
+                if st.button(label, key=f"demo_{selected_id}_{label}_{i}", use_container_width=True):
                     st.session_state["auto_query"] = q
                     st.rerun()
 

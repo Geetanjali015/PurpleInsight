@@ -38,3 +38,10 @@ datasets:
     category: KPI
     primary_use_cases:
     - summarize
+  branch:
+    file: branch.csv
+    display_name: branch
+    description: branch performace
+    category: Revenue
+    primary_use_cases:
+    - summarize
